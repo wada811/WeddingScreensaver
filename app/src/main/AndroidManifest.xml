@@ -1,0 +1,44 @@
+<manifest
+    package="com.wada811.wedding.screensaver"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name="com.wada811.wedding.screensaver.DayDreamLauncher"
+            android:exported="false"
+            >
+            <intent-filter>
+                <action android:name="android.service.dreams.DreamService"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.service.dream"
+                android:resource="@xml/daydream"/>
+        </service>
+
+        <activity
+            android:name="com.wada811.wedding.screensaver.SettingsActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name="com.wada811.wedding.screensaver.ScreensaverActivity"
+            android:label="@string/app_name"
+            android:theme="@style/ScreensaverTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

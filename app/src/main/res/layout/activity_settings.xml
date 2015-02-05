@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:keepScreenOn="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/md_teal_100"
+            android:orientation="vertical"
+            android:padding="@dimen/list_item_padding">
+
+            <TextView
+                android:id="@+id/titleBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:gravity="center_vertical"
+                android:text="Title Image"
+                android:textSize="@dimen/list_item_text_size"/>
+
+            <ImageView
+                android:id="@+id/titleImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/md_teal_100"
+            android:orientation="vertical"
+            android:padding="@dimen/list_item_padding">
+
+            <TextView
+                android:id="@+id/slideBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:gravity="center_vertical"
+                android:text="Slide Images"
+                android:textSize="@dimen/list_item_text_size"/>
+
+            <GridView
+                android:id="@+id/slideGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="8dp"
+                android:numColumns="4"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="8dp">
+
+            </GridView>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

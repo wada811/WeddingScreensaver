@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WeddingScreensaver</string>
+    <string name="title_dir">title</string>
+    <string name="slide_dir">slide</string>
+</resources>
